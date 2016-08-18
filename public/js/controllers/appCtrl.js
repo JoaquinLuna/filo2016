@@ -12,8 +12,8 @@ angular.module('filo2016')
           email: firebaseUser.email
         };
         $sessionStorage.userData = user;
-        //console.log("Auth State changed: " + angular.toJson(user, true));
-        console.log("Auth State changed.");
+        console.log("Auth State changed: " + angular.toJson(user, true));
+        //console.log("Auth State changed.");
       }
     });
   })
