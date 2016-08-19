@@ -35,9 +35,9 @@ angular.module('filo2016', ['ionic', 'firebase', 'ngStorage'])
         }
       },
       resolve: {
-        auth: function($q, authService) {
+        auth: function($q, firebaseService) {
           var deferred = $q.defer();
-          var auth = authService;
+          var auth = firebaseService;
           auth.$requireSignIn().then(function(result) {
             deferred.resolve(result);
           }).catch(function(err) {

@@ -13,3 +13,11 @@
   border: 0;
   box-shadow: none;
 }
+.scroll{
+  height: 100%;
+  width: 100%;
+}
+#loading{
+  -webkit-animation-duration: 0.3s;
+  -webkit-animation-delay: 0s;
+}

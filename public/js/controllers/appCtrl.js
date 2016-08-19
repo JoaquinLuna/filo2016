@@ -1,7 +1,7 @@
 'use strict';
 angular.module('filo2016')
-  .controller("appCtrl", function($scope, $sessionStorage, $state, authService) {
-    var auth = authService;
+  .controller("appCtrl", function($scope, $sessionStorage, $state, firebaseService) {
+    var auth = firebaseService;
 
     auth.$onAuthStateChanged(function(firebaseUser) {
       if (firebaseUser) {

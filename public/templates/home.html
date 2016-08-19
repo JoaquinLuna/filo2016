@@ -1,6 +1,19 @@
 <ion-view>
   <ion-content style="background-color: #00BCD4;">
-    <button class="button button-icon ion-navicon" style="font-size: 25px; margin-left: 5px;" menu-toggle="left">
+    <button class="button button-icon ion-navicon animated flip" style="font-size: 25px; margin-left: 5px;" menu-toggle="left">
     </button>
+    <div id="main" style="height: 100%; width: 100%;">
+      <div id="loading" style="position: fixed; width: 100%; text-align: -webkit-center; top: 50%;">
+        <ion-spinner icon="circles" style=""></ion-spinner>
+      </div>
+      <div id="data">
+        <!-- <pre>{{ data.preguntas['00001'] | json }}</pre> -->
+        <div class="card" ng-if="data">
+          <div class="item item-text-wrap">
+            {{data.preguntas['00001'].q}}
+          </div>
+        </div>
+      </div>
+    </div>
   </ion-content>
 </ion-view>

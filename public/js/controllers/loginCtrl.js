@@ -1,7 +1,7 @@
 'use strict';
 angular.module('filo2016')
-  .controller("loginCtrl", function($scope, $state, authService) {
-    var auth = authService;
+  .controller("loginCtrl", function($scope, $state, firebaseService) {
+    var auth = firebaseService;
     var provider = new firebase.auth.GoogleAuthProvider();
     //provider.addScope('https://www.googleapis.com/auth/plus.login');
 
