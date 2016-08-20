@@ -26,3 +26,8 @@ app.listen(appEnv.port, '0.0.0.0', function() {
   // print a message when the server starts listening
   console.log("server starting on " + appEnv.url);
 });
+app.post('/sendresp', (req, res) => {
+  const data = req.body;
+  console.log(data);
+  res.sendStatus(200);
+});

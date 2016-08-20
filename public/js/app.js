@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('filo2016', ['ionic', 'firebase', 'ngStorage'])
+angular.module('filo2016', ['ionic', 'firebase', 'ngStorage', 'dataService'])
 
 .run(["$rootScope", "$state", function($rootScope, $state) {
   $rootScope.$on("$stateChangeError", function(event, toState, toParams, fromState, fromParams, error) {
