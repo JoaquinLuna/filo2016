@@ -13,6 +13,7 @@ var express = require('express');
 var cfenv = require('cfenv');
 var bodyParser = require('body-parser');
 var firebase = require("firebase");
+var path = require("path");
 
 // create a new express server
 var app = express();
@@ -28,7 +29,7 @@ var appEnv = cfenv.getAppEnv();
 
 
 firebase.initializeApp({
-  serviceAccount: "credentials/filo2016-8c3d6004c961.json",
+  serviceAccount: path.resolve(__dirname, './credentials/filo2016-8c3d6004c961.json'),
   databaseURL: "https://filo2016-dd70d.firebaseio.com/"
 });
 var db = firebase.database();
