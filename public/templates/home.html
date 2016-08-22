@@ -7,34 +7,34 @@
         <ion-spinner icon="circles" style=""></ion-spinner>
       </div>
       <div id="data">
-        <!-- <pre>{{ data.preguntas['00001'] | json }}</pre> -->
-        <div class="card" ng-if="data">
+        <!-- <pre>{{ preguntas['00001'] | json }}</pre> -->
+        <div class="card" ng-if="preguntas">
           <div class="item item-text-wrap">
-            {{data.preguntas['00001'].q}}
+            {{preguntas['00001'].q}}
           </div>
         </div>
-        <div ng-if="data" style="text-align: -webkit-center;">
+        <div ng-if="preguntas" style="text-align: -webkit-center;">
           <div class="row" style="width: 100%; margin-bottom: 10px;">
             <div class="col" style="text-align: -webkit-center;">
               <button class="button button-positive" ng-click="sendResp('A')" style="height: 65px; line-height: 20px; min-width: 100%; color: #eefb5a;">
-                A) {{data.preguntas['00001'].opc1}}
+                A) {{preguntas['00001'].opc1}}
               </button>
             </div>
             <div class="col" style="text-align: -webkit-center;">
               <button class="button button-balanced" ng-click="sendResp('B')" style="height: 65px; line-height: 20px; min-width: 100%; color: #483d8b;">
-                B) {{data.preguntas['00001'].opc2}}
+                B) {{preguntas['00001'].opc2}}
               </button>
             </div>
           </div>
           <div class="row" style="width: 100%;">
             <div class="col" style="text-align: -webkit-center;">
               <button class="button button-energized" ng-click="sendResp('C')" style="height: 65px; line-height: 20px; min-width: 100%; color: #2a7d1c;">
-                C) {{data.preguntas['00001'].opc3}}
+                C) {{preguntas['00001'].opc3}}
               </button>
             </div>
             <div class="col" style="text-align: -webkit-center;">
               <button class="button button-assertive" ng-click="sendResp('D')" style="height: 65px; line-height: 20px; min-width: 100%; color: #def3ec;">
-                D) {{data.preguntas['00001'].opc4}}
+                D) {{preguntas['00001'].opc4}}
               </button>
             </div>
           </div>

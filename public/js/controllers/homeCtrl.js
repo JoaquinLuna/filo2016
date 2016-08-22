@@ -1,7 +1,7 @@
 'use strict';
 angular.module('filo2016')
   .controller("homeCtrl", function($scope, $firebaseObject, $sessionStorage, dataService) {
-    var ref = firebase.database().ref().child("data");
+    var ref = firebase.database().ref().child("data").child("preguntas");
     var obj = $firebaseObject(ref);
     // download the data into a local object
     var syncObject = $firebaseObject(ref);
@@ -15,7 +15,7 @@ angular.module('filo2016')
     }).catch(function(error) {
       console.error("Error:", error);
     });
-    syncObject.$bindTo($scope, "data");
+    syncObject.$bindTo($scope, "preguntas");
 
 
     $scope.sendResp = function(rsp) {
