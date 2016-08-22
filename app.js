@@ -28,7 +28,7 @@ var appEnv = cfenv.getAppEnv();
 
 
 firebase.initializeApp({
-  serviceAccount: "credentials/filo2016-bbe4f54baca2.json",
+  serviceAccount: "credentials/filo2016-8c3d6004c961.json",
   databaseURL: "https://filo2016-dd70d.firebaseio.com/"
 });
 var db = firebase.database();
