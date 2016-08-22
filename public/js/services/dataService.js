@@ -7,7 +7,7 @@
     .module('dataService')
     .factory('dataService', dataService);
 
-  function dataService($q, $http) {
+  function dataService($q, $http, $httpParamSerializer) {
 
     var dataService = {
       sendResp: sendResp
@@ -18,15 +18,15 @@
     function sendResp(usr, qs, rsp) {
       var deferred = $q.defer();
       // use $.param jQuery function to serialize data from JSON
-      var data = $.param({
+      var data = {
         user: usr,
         q: qs,
         r: rsp
-      });
+      };
 
       var config = {
         headers: {
-          'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8;'
+          'Content-Type': 'application/json'
         }
       }
 
